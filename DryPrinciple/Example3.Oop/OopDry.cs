@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DryPrinciple.Enums;
 
 namespace DryPrinciple.Example3.Oop
 {
-    class OopDry
+    class OopDryFruit : BaseExample<Fruit>
+    {
+    }
+
+    class OopDryCars : BaseExample<CarMake>
     {
     }
 }
