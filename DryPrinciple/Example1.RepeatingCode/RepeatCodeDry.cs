@@ -3,7 +3,7 @@ using System.Text;
 
 namespace DryPrinciple.Example1.RepeatingCode
 {
-    class RepeatCodeDry
+    class RepeatCodeDry : IRepeatCode
     {
         public string GetFruits()
         {
@@ -27,7 +27,7 @@ namespace DryPrinciple.Example1.RepeatingCode
             return GetValues(carNames);
         }
 
-        public string GetValues(List<string> collection)
+        private string GetValues(List<string> collection)
         {
             var sb = new StringBuilder();
 

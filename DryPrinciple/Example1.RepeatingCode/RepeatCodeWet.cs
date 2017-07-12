@@ -3,7 +3,7 @@ using System.Text;
 
 namespace DryPrinciple.Example1.RepeatingCode
 {
-    class RepeatCodeWet
+    class RepeatCodeWet : IRepeatCode
     {
         public string GetFruits()
         {
