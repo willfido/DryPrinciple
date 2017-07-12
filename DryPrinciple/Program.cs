@@ -1,4 +1,6 @@
-﻿using DryPrinciple.Example1.RepeatingCode;
+﻿using DryPrinciple.Enums;
+using DryPrinciple.Example1.RepeatingCode;
+using DryPrinciple.Example2.MagicStrings;
 using DryPrinciple.Interfaces;
 using System;
 
@@ -55,8 +57,9 @@ namespace DryPrinciple
         {
             //resolving the repeating switch with an interface
             IExample repeatCode;
+            IExample magicString = new MagicStringsDry();
 
-            if (principle == "dry")
+            if (principle == Principle.Dry.ToString().ToLower())
             {
                 repeatCode = new RepeatCodeDry();
             }
@@ -70,6 +73,14 @@ namespace DryPrinciple
                 case "1":
                     Console.WriteLine(repeatCode.GetFruits());
                     Console.WriteLine(repeatCode.GetCarNames());
+                    break;
+                case "2":
+                    Console.WriteLine("Previous");
+                    Console.WriteLine(repeatCode.GetFruits());
+                    Console.WriteLine(repeatCode.GetCarNames());
+                    Console.WriteLine("Changed");
+                    Console.WriteLine(magicString.GetFruits());
+                    Console.WriteLine(magicString.GetCarNames());
                     break;
             }
         }

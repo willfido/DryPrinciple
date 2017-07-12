@@ -1,4 +1,6 @@
-﻿using DryPrinciple.Interfaces;
+﻿using DryPrinciple.Enums;
+using DryPrinciple.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,14 +10,14 @@ namespace DryPrinciple.Example2.MagicStrings
     {
         public string GetFruits()
         {
-            var fruitList = new List<string> { "banana", "pear", "apple" };
+            var fruitList = Enum.GetNames(typeof(Fruit));
 
             return GetValues(fruitList);
         }
 
         public string GetCarNames()
         {
-            var carNames = new List<string> { "skoda", "ford", "mazda" };
+            var carNames = Enum.GetNames(typeof(CarMake));
 
             return GetValues(carNames);
         }
@@ -29,9 +31,8 @@ namespace DryPrinciple.Example2.MagicStrings
                 sb.Append(item).Append(",");
             }
 
-            sb.Remove(sb.Length - 1, 1);
-
-            return sb.ToString();
+            //using the extension method on string to remove teh trailing ,
+            return sb.ToString().TrimEnd(',');
         }
     }
 }

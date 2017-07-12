@@ -20,6 +20,7 @@ namespace DryPrinciple.Example1.RepeatingCode
             return GetValues(carNames);
         }
 
+        //we can eliminate the redundancy by using a method.
         private string GetValues(IEnumerable<string> collection)
         {
             var sb = new StringBuilder();
