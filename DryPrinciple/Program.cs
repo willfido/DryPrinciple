@@ -1,11 +1,13 @@
 ﻿using DryPrinciple.Example1.RepeatingCode;
+using DryPrinciple.Interfaces;
 using System;
 
 namespace DryPrinciple
 {
     class Program
     {
-        static readonly int expectedArgumentCount = 1;
+        // magic string resolved with a variable.
+        static readonly int expectedArgumentCount = 2;
 
         static void Main(string[] args)
         {
@@ -34,8 +36,6 @@ namespace DryPrinciple
                         Console.WriteLine(repeatCodeExample.GetFruits());
                         Console.WriteLine(repeatCodeExample.GetCarNames());
                         break;
-                    default:
-                        break;
                 }
             }
             else
@@ -47,16 +47,14 @@ namespace DryPrinciple
                         Console.WriteLine(repeatCodeExample.GetFruits());
                         Console.WriteLine(repeatCodeExample.GetCarNames());
                         break;
-                    default:
-                        break;
                 }
             }
         }
 
         static void Dry(string principle, string example)
         {
-            //resolving the repeating switch with a case statement
-            IRepeatCode repeatCode;
+            //resolving the repeating switch with an interface
+            IExample repeatCode;
 
             if (principle == "dry")
             {
@@ -72,8 +70,6 @@ namespace DryPrinciple
                 case "1":
                     Console.WriteLine(repeatCode.GetFruits());
                     Console.WriteLine(repeatCode.GetCarNames());
-                    break;
-                default:
                     break;
             }
         }

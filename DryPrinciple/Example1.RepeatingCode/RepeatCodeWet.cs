@@ -1,19 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using DryPrinciple.Interfaces;
+using System.Collections.Generic;
 using System.Text;
 
 namespace DryPrinciple.Example1.RepeatingCode
 {
-    class RepeatCodeWet : IRepeatCode
+    class RepeatCodeWet : IExample
     {
         public string GetFruits()
         {
-            StringBuilder fruitsSb = new StringBuilder();
+            var fruitsSb = new StringBuilder();
 
-            List<string> fruitList = new List<string>();
+            var fruitList = new List<string> { "banana", "pear", "apple" };
 
-            fruitList.Add("banana");
-            fruitList.Add("pear");
-            fruitList.Add("apple");
 
             foreach (var fruit in fruitList)
             {
@@ -25,13 +23,10 @@ namespace DryPrinciple.Example1.RepeatingCode
 
         public string GetCarNames()
         {
-            StringBuilder fruitsSb = new StringBuilder();
+            var fruitsSb = new StringBuilder();
 
-            List<string> carNames = new List<string>();
+            var carNames = new List<string> { "skoda", "ford", "mazda" };
 
-            carNames.Add("skoda");
-            carNames.Add("ford");
-            carNames.Add("mazda");
 
             foreach (var carName in carNames)
             {

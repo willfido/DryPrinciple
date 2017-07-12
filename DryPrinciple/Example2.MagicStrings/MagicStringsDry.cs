@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DryPrinciple.Example1.RepeatingCode
+namespace DryPrinciple.Example2.MagicStrings
 {
-    class RepeatCodeDry : IExample
+    class MagicStringsDry : IExample
     {
         public string GetFruits()
         {
