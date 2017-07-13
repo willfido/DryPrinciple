@@ -12,7 +12,7 @@ namespace DryPrinciple.Example1.RepeatingCode
 
             var fruitList = new List<string> { "banana", "pear", "apple" };
 
-
+            //1. RepeatCode
             foreach (var fruit in fruitList)
             {
                 fruitsSb.Append(fruit).Append(",");
@@ -27,7 +27,7 @@ namespace DryPrinciple.Example1.RepeatingCode
 
             var carNames = new List<string> { "skoda", "ford", "mazda" };
 
-
+            //1. Repeat Code
             foreach (var carName in carNames)
             {
                 fruitsSb.Append(carName).Append(",");

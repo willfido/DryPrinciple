@@ -8,7 +8,7 @@ namespace DryPrinciple.Example3.Oop
     {
         public string GetList()
         {
-            //If we want to extend functioanlity to the list it makes sense to farm this out.
+            //If we want to extend functionality to the list it makes sense to do this here.
             var list = Enum.GetNames(typeof(T));
 
             return GetValues(list);
@@ -25,6 +25,13 @@ namespace DryPrinciple.Example3.Oop
 
             //using the extension method on string to remove teh trailing ,
             return sb.ToString().TrimEnd(',');
+        }
+
+        public double Cost { get; protected set; }
+
+        public virtual void CalculateCost(int cost)
+        {
+            Cost = cost;
         }
     }
 }

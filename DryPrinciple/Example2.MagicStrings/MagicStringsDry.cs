@@ -10,6 +10,7 @@ namespace DryPrinciple.Example2.MagicStrings
     {
         public string GetFruits()
         {
+            //2. enums replace the list.  Now if we change the items in a single place it shouldn't cause a big problem
             var fruitList = Enum.GetNames(typeof(Fruit));
 
             return GetValues(fruitList);
@@ -31,7 +32,7 @@ namespace DryPrinciple.Example2.MagicStrings
                 sb.Append(item).Append(",");
             }
 
-            //using the extension method on string to remove teh trailing ,
+            //2. using the extension method on string to remove teh trailing ,
             return sb.ToString().TrimEnd(',');
         }
     }
